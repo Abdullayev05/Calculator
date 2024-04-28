@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Kalam:wght@300;400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    user-select: none;
+}
+
+body {
+    background-color: #4A5C6A;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator {
+    height: 500px;
+    width: 350px;
+    background-color: #f9f9f9;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 12px #ffffff,
+        5px 5px 12px rgba(0, 0, 0, .16);
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    padding: 20px;
+}
+
+input {
+    grid-column: span 4;
+    height: 70px;
+    width: 300px;
+    margin-bottom: 30px;
+    background-color: #ecf3f3;
+    /* box-shadow: inset -5px -5px 12px #ffffff,
+        5px 5px 12px rgba(0, 0, 0, .16); */
+    border: none;
+    border-radius: 30px;
+    color: rgb(70, 70, 70);
+    font-size: 40px;
+    text-align: end;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+button {
+    height: 60px;
+    width: 60px;
+    background-color: #018ABE;
+    /* box-shadow: -5px -5px 12px #ffffff,
+        5px 5px 12px rgba(0, 0, 0, .16); */
+    border: none;
+    border-radius: 50px;
+    font-size: 25px;
+    color: white;
+}
+
+.equal {
+    width: 140px;
+    border-radius: 40px;
+    background-color: #ecf0f3;
+    /* box-shadow: -5px -5px 12px #ffffff,
+        5px 5px 12px rgba(0, 0, 0, .16); */
+    background-color: #253745;
+    font-size: 30px;
+    color: white;
+}
+
+.differ {
+    background-color: #9BA8AB;
+}
