@@ -1,18 +1,22 @@
-let output = document.getElementById('output');
-let buttons = document.querySelectorAll('.calculator button:not(.equal)');
-let display_C = document.getElementById('#c_btn')
-buttons.forEach(function(button) {
-    button.addEventListener('click', function() {
-        output.value += button.textContent;
-        c_btn.addEventListener('click', function() {
-            output.value = '';
+document.addEventListener('DOMContentLoaded', () => {
+    const input = document.getElementById('input_calc');
+    const buttons = document.querySelectorAll('.calc_buttons button');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            if (button.textContent === 'AC') {
+                input.value = "";
+            } else if (button.textContent === 'C') {
+                input.value = input.value.slice(0, -1);
+            } else if (button.textContent === '=') {
+                try {
+                    input.value = eval(input.value.replace('×', '*').replace('÷', '/').replace(',', '.'));
+                } catch (e) {
+                    input.value = 'Error';
+                }
+            } else {
+                input.value += button.textContent;
+            }
         });
-        });
-});
-document.querySelector('.equal').addEventListener('click', function() {
-    try {
-        output.value = eval(output.value);
-    } catch (error) {
-        output.value = 'Xəta baş verdi';
-    }
-});
+    });
+})

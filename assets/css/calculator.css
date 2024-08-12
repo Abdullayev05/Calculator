@@ -7,72 +7,51 @@
     text-decoration: none;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
-    user-select: none;
 }
 
 body {
-    background-color: #4A5C6A;
-}
-
-.container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #4A5C6A;
 }
 
-.calculator {
+#calculator {
     height: 500px;
     width: 350px;
-    background-color: #f9f9f9;
+    border: 1px solid black;
+    background: #f9f9f9;
+    padding: 25px;
     border-radius: 30px;
-    box-shadow: inset 5px 5px 12px #ffffff,
-        5px 5px 12px rgba(0, 0, 0, .16);
-    display: grid;
-    grid-template-columns: repeat(4, 80px);
-    padding: 20px;
+    border: 0;
 }
 
-input {
-    grid-column: span 4;
-    height: 70px;
+#calculator input {
+    outline: none;
     width: 300px;
-    margin-bottom: 30px;
-    background-color: #ecf3f3;
-    /* box-shadow: inset -5px -5px 12px #ffffff,
-        5px 5px 12px rgba(0, 0, 0, .16); */
-    border: none;
-    border-radius: 30px;
-    color: rgb(70, 70, 70);
-    font-size: 40px;
-    text-align: end;
-    padding: 20px;
-    margin-top: 10px;
-}
-
-button {
-    height: 60px;
-    width: 60px;
-    background-color: #018ABE;
-    /* box-shadow: -5px -5px 12px #ffffff,
-        5px 5px 12px rgba(0, 0, 0, .16); */
-    border: none;
-    border-radius: 50px;
+    height: 70px;
+    border: 0;
     font-size: 25px;
-    color: white;
+    text-align: right;
+    background-color: #ecf3f3;
+    border-radius: 30px;
+    padding-right: 20px;
 }
 
-.equal {
-    width: 140px;
-    border-radius: 40px;
-    background-color: #ecf0f3;
-    /* box-shadow: -5px -5px 12px #ffffff,
-        5px 5px 12px rgba(0, 0, 0, .16); */
-    background-color: #253745;
-    font-size: 30px;
-    color: white;
+.calc_buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding-top: 30px; 
 }
 
-.differ {
-    background-color: #9BA8AB;
+.calc_buttons button {
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(148, 148, 165);
+    color: rgb(255, 255, 255);
 }
